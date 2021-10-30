@@ -1,0 +1,147 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{graphicx}
+\usepackage{lscape}
+\title{Output tables for the test of Multiple comparisons.}
+\author{}
+\date{\today}
+\begin{document}
+\begin{landscape}
+\pagestyle{empty}
+\maketitle
+\thispagestyle{empty}
+\section{Average rankings of Friedman test}
+
+
+
+Average ranks obtained by applying the Friedman procedure
+
+\begin{table}[!htp]
+\centering
+\begin{tabular}{|c|c|}\hline
+Algorithm&Ranking\\\hline
+brm-original & 3.4301\\
+brm-correlation & 3.5484\\
+brm-cosine & 3.8441\\
+brm-manhattan & 3.5699\\
+gmm & 2.9301\\
+isof & 4.8763\\
+ocsvm & 5.8011\\
+\hline
+\end{tabular}
+\caption{Average Rankings of the algorithms}
+\end{table}
+
+Friedman statistic considering reduction performance (distributed according to chi-square with 6 degrees of freedom: 117.470046.
+
+P-value computed by Friedman Test: 5.644129608128878E-11.\newline
+
+
+
+\pagebreak
+
+\section{Post hoc comparisons}
+
+Results achieved on post hoc comparisons for $\alpha = 0.05$, $\alpha = 0.10$ and adjusted p-values.
+
+\subsection{P-values for $\alpha=0.05$}
+
+\begin{table}[!htp]
+\centering\scriptsize
+\begin{tabular}{ccccc}
+$i$&algorithms&$z=(R_0 - R_i)/SE$&$p$&Holm\\
+\hline21&gmm vs. ocsvm&9.062571&0&0.002381\\
+20&brm-original vs. ocsvm&7.484258&0&0.0025\\
+19&brm-correlation vs. ocsvm&7.110893&0&0.002632\\
+18&brm-manhattan vs. ocsvm&7.043009&0&0.002778\\
+17&brm-cosine vs. ocsvm&6.177483&0&0.002941\\
+16&gmm vs. isof&6.14354&0&0.003125\\
+15&brm-original vs. isof&4.565227&0.000005&0.003333\\
+14&brm-correlation vs. isof&4.191863&0.000028&0.003571\\
+13&brm-manhattan vs. isof&4.123979&0.000037&0.003846\\
+12&brm-cosine vs. isof&3.258452&0.00112&0.004167\\
+11&isof vs. ocsvm&2.91903&0.003511&0.004545\\
+10&brm-cosine vs. gmm&2.885088&0.003913&0.005\\
+9&brm-manhattan vs. gmm&2.019562&0.043429&0.005556\\
+8&brm-correlation vs. gmm&1.951677&0.050977&0.00625\\
+7&brm-original vs. gmm&1.578313&0.114494&0.007143\\
+6&brm-original vs. brm-cosine&1.306775&0.191289&0.008333\\
+5&brm-correlation vs. brm-cosine&0.933411&0.350608&0.01\\
+4&brm-cosine vs. brm-manhattan&0.865526&0.38675&0.0125\\
+3&brm-original vs. brm-manhattan&0.441249&0.659033&0.016667\\
+2&brm-original vs. brm-correlation&0.373364&0.708877&0.025\\
+1&brm-correlation vs. brm-manhattan&0.067884&0.945878&0.05\\
+\hline
+\end{tabular}
+\caption{P-values Table for $\alpha=0.05$}
+\end{table}Holm's procedure rejects those hypotheses that have an unadjusted p-value $\le0.005556$.
+
+\pagebreak
+
+\subsection{P-values for $\alpha=0.10$}
+
+\begin{table}[!htp]
+\centering\scriptsize
+\begin{tabular}{ccccc}
+$i$&algorithms&$z=(R_0 - R_i)/SE$&$p$&Holm\\
+\hline21&gmm vs. ocsvm&9.062571&0&0.004762\\
+20&brm-original vs. ocsvm&7.484258&0&0.005\\
+19&brm-correlation vs. ocsvm&7.110893&0&0.005263\\
+18&brm-manhattan vs. ocsvm&7.043009&0&0.005556\\
+17&brm-cosine vs. ocsvm&6.177483&0&0.005882\\
+16&gmm vs. isof&6.14354&0&0.00625\\
+15&brm-original vs. isof&4.565227&0.000005&0.006667\\
+14&brm-correlation vs. isof&4.191863&0.000028&0.007143\\
+13&brm-manhattan vs. isof&4.123979&0.000037&0.007692\\
+12&brm-cosine vs. isof&3.258452&0.00112&0.008333\\
+11&isof vs. ocsvm&2.91903&0.003511&0.009091\\
+10&brm-cosine vs. gmm&2.885088&0.003913&0.01\\
+9&brm-manhattan vs. gmm&2.019562&0.043429&0.011111\\
+8&brm-correlation vs. gmm&1.951677&0.050977&0.0125\\
+7&brm-original vs. gmm&1.578313&0.114494&0.014286\\
+6&brm-original vs. brm-cosine&1.306775&0.191289&0.016667\\
+5&brm-correlation vs. brm-cosine&0.933411&0.350608&0.02\\
+4&brm-cosine vs. brm-manhattan&0.865526&0.38675&0.025\\
+3&brm-original vs. brm-manhattan&0.441249&0.659033&0.033333\\
+2&brm-original vs. brm-correlation&0.373364&0.708877&0.05\\
+1&brm-correlation vs. brm-manhattan&0.067884&0.945878&0.1\\
+\hline
+\end{tabular}
+\caption{P-values Table for $\alpha=0.10$}
+\end{table}Holm's procedure rejects those hypotheses that have an unadjusted p-value $\le0.011111$.
+
+\pagebreak
+
+\subsection{Adjusted p-values}
+
+\begin{table}[!htp]
+\centering\scriptsize
+\begin{tabular}{cccc}
+i&hypothesis&unadjusted $p$&$p_{Holm}$\\
+\hline1&gmm vs .ocsvm&0&0\\
+2&brm-original vs .ocsvm&0&0\\
+3&brm-correlation vs .ocsvm&0&0\\
+4&brm-manhattan vs .ocsvm&0&0\\
+5&brm-cosine vs .ocsvm&0&0\\
+6&gmm vs .isof&0&0\\
+7&brm-original vs .isof&0.000005&0.000075\\
+8&brm-correlation vs .isof&0.000028&0.000387\\
+9&brm-manhattan vs .isof&0.000037&0.000484\\
+10&brm-cosine vs .isof&0.00112&0.013443\\
+11&isof vs .ocsvm&0.003511&0.038623\\
+12&brm-cosine vs .gmm&0.003913&0.03913\\
+13&brm-manhattan vs .gmm&0.043429&0.39086\\
+14&brm-correlation vs .gmm&0.050977&0.407812\\
+15&brm-original vs .gmm&0.114494&0.801456\\
+16&brm-original vs .brm-cosine&0.191289&1.147735\\
+17&brm-correlation vs .brm-cosine&0.350608&1.753039\\
+18&brm-cosine vs .brm-manhattan&0.38675&1.753039\\
+19&brm-original vs .brm-manhattan&0.659033&1.977099\\
+20&brm-original vs .brm-correlation&0.708877&1.977099\\
+21&brm-correlation vs .brm-manhattan&0.945878&1.977099\\
+\hline
+\end{tabular}
+\caption{Adjusted $p$-values}
+\end{table}
+
+\end{landscape}
+\end{document}
