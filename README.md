@@ -157,7 +157,7 @@ Fig. 6 shows the CD diagram for the AUC scores, we can see that there is no stat
 
 ## Conclusion
 
-In this assignment, we empirically evaluated the performance of 4 SSAD algorithms on 93 databases. To achieve that, we developed a code which was used to perform the benchmark between the mentioned SSAD algorithms. Here we include the modified class for the modified BRM algorithm which allows the use of any dissimilarity measure. Through the use of this code, our studies showed that BRM, BRM (Manhattan) and GMM achieved the highest average AUC, and they also ranked highest according to Friedman’s test. BRM (Manhattan) also conveyed a high average AUC score but only on datasets that have been through a Standard normalization. The results imply that these algorithms are robust classifiers obtaining good classification results on diverse anomaly detection problems. 
+We evaluated the performance of 4 SSAD algorithms on 93 databases. To achieve that, we developed a code which was used to perform the benchmark between the mentioned SSAD algorithms. Here we include the modified class for the modified BRM algorithm which allows the use of any dissimilarity measure. Through the use of this code, our studies showed that BRM, BRM (Manhattan) and GMM achieved the highest average AUC, and they also ranked highest according to Friedman’s test. BRM (Manhattan) also conveyed a high average AUC score but only on datasets that have been through a Standard normalization. The results imply that these algorithms are robust classifiers obtaining good classification results on diverse anomaly detection problems. 
 
 ## References 
 
